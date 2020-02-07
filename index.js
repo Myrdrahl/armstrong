@@ -21,8 +21,8 @@ function calculateArmstrongNumbers () {
       paragraph.innerHTML += '</br>'
     }
     number++
-    if (number === topNumber) {
-      console.log('Done!')
+    if (number == topNumber) {
+      paragraph.innerText += 'Done!'
     }
   }
 }
@@ -32,6 +32,7 @@ function splitNumber (number) {
 }
 
 submitButton.addEventListener('click', function () {
+  paragraph.innerText = ''
   topNumber = userInput.value
   calculateArmstrongNumbers()
 })
